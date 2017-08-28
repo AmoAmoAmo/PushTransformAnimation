@@ -8,7 +8,7 @@
 
 #import "SecondViewController.h"
 #import "MagicMoveBackTransion.h"
-#import "ViewController.h"
+#import "FirstViewController.h"
 
 @interface SecondViewController ()<UINavigationControllerDelegate>
 
@@ -37,13 +37,13 @@
 
 
 
-
+#pragma mark - UINavigationControllerDelegate
 - (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                             animationControllerForOperation:(UINavigationControllerOperation)operation
                                                          fromViewController:(UIViewController *)fromVC
                                                            toViewController:(UIViewController *)toVC  NS_AVAILABLE_IOS(7_0)
 {
-    if([toVC isKindOfClass:[ViewController class]]){
+    if([toVC isKindOfClass:[FirstViewController class]]){
         MagicMoveBackTransion *transion = [[MagicMoveBackTransion alloc] init];
         return transion;
     }else{
@@ -52,10 +52,5 @@
 }
 
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

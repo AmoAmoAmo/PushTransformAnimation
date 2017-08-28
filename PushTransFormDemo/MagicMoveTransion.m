@@ -7,20 +7,18 @@
 //
 
 #import "MagicMoveTransion.h"
-#import "ViewController.h"
+#import "FirstViewController.h"
 #import "SecondViewController.h"
 #import "CustomCell.h"
 
 @implementation MagicMoveTransion
 
-// synchronize with the main animation.
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext
 {
     return 0.6;
 }
 
 
-// This method can only  be a nop if the transition is interactive and not a percentDriven interactive transition.
 /**
  1、 - (UIView *)containerView;  //转场动画发生的容器
  
@@ -33,7 +31,7 @@
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
     // 1.获取两个VC 和 动画发生的容器
-    ViewController *firstVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    FirstViewController *firstVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     SecondViewController *secondVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIView *containerView = [transitionContext containerView];  // 此处容器大小即为屏幕大小 self.view
     

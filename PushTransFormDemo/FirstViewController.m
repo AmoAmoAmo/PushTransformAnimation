@@ -1,24 +1,24 @@
 //
-//  ViewController.m
+//  FirstViewController.m
 //  PushTransFormDemo
 //
 //  Created by Jane on 16/8/22.
 //  Copyright © 2016年 Jane. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FirstViewController.h"
 #import "CustomCell.h"
 #import "SecondViewController.h"
 
 #import "MagicMoveTransion.h"
 
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate,UINavigationControllerDelegate>
+@interface FirstViewController ()<UITableViewDataSource,UITableViewDelegate,UINavigationControllerDelegate>
 
 //@property (nonatomic, strong) UITableView *table;
 
 @end
 
-@implementation ViewController
+@implementation FirstViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,8 +50,8 @@
 
 
 
-#pragma mark - nav 协议方法的实现
-// 告知 Nav 去使用 UIViewControllerAnimatedTransitioning
+#pragma mark - UINavigationController - Delegate
+// nav 协议方法的实现 告知 Nav 去使用 UIViewControllerAnimatedTransitioning协议中的方法
 - (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                             animationControllerForOperation:(UINavigationControllerOperation)operation
                                                          fromViewController:(UIViewController *)fromVC

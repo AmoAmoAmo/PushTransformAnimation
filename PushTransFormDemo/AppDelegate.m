@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "FirstViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,7 +26,7 @@
     
     [self.window makeKeyAndVisible] ;
     
-    ViewController * rootVC = [[ViewController alloc] init] ;
+    FirstViewController * rootVC = [[FirstViewController alloc] init] ;
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rootVC];
     

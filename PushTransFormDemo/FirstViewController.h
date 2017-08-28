@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FirstViewController.h
 //  PushTransFormDemo
 //
 //  Created by Jane on 16/8/22.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface FirstViewController : UIViewController
 
 @property (nonatomic, strong) UITableView *table;
 @property (nonatomic, strong) NSIndexPath *indexPath;

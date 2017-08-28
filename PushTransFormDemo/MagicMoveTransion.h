@@ -10,7 +10,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-//添加一个 Cocoa Touch Class，继承自 NSObject，取名 MagicMoveTransion，遵守 UIViewControllerAnimatedTransitioning 协议。
+/*
+ 添加一个 Cocoa Touch Class，继承自 NSObject，取名 MagicMoveTransion，遵守 UIViewControllerAnimatedTransitioning 协议。
+ 
+ 实现该协议的方法
+ 
+ */
+
 @interface MagicMoveTransion : NSObject<UIViewControllerAnimatedTransitioning>
 
 @end

@@ -7,23 +7,21 @@
 //
 
 #import "MagicMoveBackTransion.h"
-#import "ViewController.h"
+#import "FirstViewController.h"
 #import "SecondViewController.h"
 #import "CustomCell.h"
 
 @implementation MagicMoveBackTransion
 
-// synchronize with the main animation.
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext
 {
     return 0.6;
 }
 
 
-// This method can only  be a nop if the transition is interactive and not a percentDriven interactive transition.
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
-    ViewController *firstVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    FirstViewController *firstVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     SecondViewController *secondVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIView *containerView = [transitionContext containerView];
     
