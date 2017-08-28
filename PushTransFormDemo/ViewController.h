@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) UITableView *table;
+@property (nonatomic, strong) NSIndexPath *indexPath;
 
 @end
 
