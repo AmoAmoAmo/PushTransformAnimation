@@ -12,9 +12,10 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    
+    [super awakeFromNib];
 //    self.imgView.backgroundColor = [UIColor yellowColor];
 }
+
 
 
 +(instancetype)cellWithTableView:(UITableView *)tableView andindexPath:(NSIndexPath *)indexPath

@@ -28,16 +28,7 @@
     [self.view addSubview:self.table];
     //cell注册方式
     [self.table registerNib:[UINib nibWithNibName:@"CustomCell" bundle:nil] forCellReuseIdentifier:@"cell"];
-    
-    // head...
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 150)];
-    headView.backgroundColor = [UIColor whiteColor];
-    self.table.tableHeaderView = headView;
-    
-    // foot...
-    UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, self.table.frame.size.height, self.view.frame.size.width, 100)];
-    footView.backgroundColor = [UIColor grayColor];
-    self.table.tableFooterView = footView;
+
 }
 
 -(void)viewWillAppear:(BOOL)animated
