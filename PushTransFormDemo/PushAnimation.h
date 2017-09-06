@@ -1,5 +1,5 @@
 //
-//  MagicMoveTransion.h
+//  PushAnimation.h
 //  PushTransFormDemo
 //
 //  Created by Jane on 16/8/23.
@@ -17,6 +17,6 @@
  
  */
 
-@interface MagicMoveTransion : NSObject<UIViewControllerAnimatedTransitioning>
+@interface PushAnimation : NSObject<UIViewControllerAnimatedTransitioning>
 
 @end

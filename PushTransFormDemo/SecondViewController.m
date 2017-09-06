@@ -7,7 +7,7 @@
 //
 
 #import "SecondViewController.h"
-#import "MagicMoveBackTransion.h"
+#import "BackAnimation.h"
 #import "FirstViewController.h"
 
 @interface SecondViewController ()<UINavigationControllerDelegate>
@@ -44,8 +44,8 @@
                                                            toViewController:(UIViewController *)toVC  NS_AVAILABLE_IOS(7_0)
 {
     if([toVC isKindOfClass:[FirstViewController class]]){
-        MagicMoveBackTransion *transion = [[MagicMoveBackTransion alloc] init];
-        return transion;
+        BackAnimation *animation = [[BackAnimation alloc] init];
+        return animation;
     }else{
         return nil;
     }

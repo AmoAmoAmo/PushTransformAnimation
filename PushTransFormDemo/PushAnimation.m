@@ -1,17 +1,17 @@
 //
-//  MagicMoveTransion.m
+//  PushAnimation.m
 //  PushTransFormDemo
 //
 //  Created by Jane on 16/8/23.
 //  Copyright © 2016年 Jane. All rights reserved.
 //
 
-#import "MagicMoveTransion.h"
+#import "PushAnimation.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
 #import "CustomCell.h"
 
-@implementation MagicMoveTransion
+@implementation PushAnimation
 
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext
 {

@@ -10,7 +10,7 @@
 #import "CustomCell.h"
 #import "SecondViewController.h"
 
-#import "MagicMoveTransion.h"
+#import "PushAnimation.h"
 
 @interface FirstViewController ()<UITableViewDataSource,UITableViewDelegate,UINavigationControllerDelegate>
 
@@ -50,8 +50,8 @@
 {
     if([toVC isKindOfClass:[SecondViewController class]])
     {
-        MagicMoveTransion *transion = [[MagicMoveTransion alloc] init];
-        return transion;
+        PushAnimation *animation = [[PushAnimation alloc] init];
+        return animation;
     }else
     {
         return nil;

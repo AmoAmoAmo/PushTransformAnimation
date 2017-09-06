@@ -1,5 +1,5 @@
 //
-//  MagicMoveBackTransion.h
+//  BackAnimation.h
 //  PushTransFormDemo
 //
 //  Created by Jane on 16/8/24.
@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface MagicMoveBackTransion : NSObject<UIViewControllerAnimatedTransitioning>
+@interface BackAnimation : NSObject<UIViewControllerAnimatedTransitioning>
 
 @end

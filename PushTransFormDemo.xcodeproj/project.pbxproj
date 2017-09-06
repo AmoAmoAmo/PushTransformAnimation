@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3F00D48A1D6C97BB00974E6C /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F00D4891D6C97BB00974E6C /* SecondViewController.xib */; };
-		3F00D48D1D6CA08500974E6C /* MagicMoveTransion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F00D48C1D6CA08500974E6C /* MagicMoveTransion.m */; };
-		3F00D4901D6CB46600974E6C /* MagicMoveBackTransion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F00D48F1D6CB46600974E6C /* MagicMoveBackTransion.m */; };
+		3F00D48D1D6CA08500974E6C /* PushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F00D48C1D6CA08500974E6C /* PushAnimation.m */; };
+		3F00D4901D6CB46600974E6C /* BackAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F00D48F1D6CB46600974E6C /* BackAnimation.m */; };
 		3F0E43E71D6B425600B208BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E43E61D6B425600B208BB /* main.m */; };
 		3F0E43EA1D6B425600B208BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E43E91D6B425600B208BB /* AppDelegate.m */; };
 		3F0E43ED1D6B425600B208BB /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E43EC1D6B425600B208BB /* FirstViewController.m */; };
@@ -23,10 +23,10 @@
 
 /* Begin PBXFileReference section */
 		3F00D4891D6C97BB00974E6C /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
-		3F00D48B1D6CA08500974E6C /* MagicMoveTransion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMoveTransion.h; sourceTree = "<group>"; };
-		3F00D48C1D6CA08500974E6C /* MagicMoveTransion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMoveTransion.m; sourceTree = "<group>"; };
-		3F00D48E1D6CB46600974E6C /* MagicMoveBackTransion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMoveBackTransion.h; sourceTree = "<group>"; };
-		3F00D48F1D6CB46600974E6C /* MagicMoveBackTransion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMoveBackTransion.m; sourceTree = "<group>"; };
+		3F00D48B1D6CA08500974E6C /* PushAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAnimation.h; sourceTree = "<group>"; };
+		3F00D48C1D6CA08500974E6C /* PushAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAnimation.m; sourceTree = "<group>"; };
+		3F00D48E1D6CB46600974E6C /* BackAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackAnimation.h; sourceTree = "<group>"; };
+		3F00D48F1D6CB46600974E6C /* BackAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackAnimation.m; sourceTree = "<group>"; };
 		3F0E43E21D6B425600B208BB /* PushTransFormDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushTransFormDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0E43E61D6B425600B208BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F0E43E81D6B425600B208BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 				3F0E43FC1D6B449F00B208BB /* CustomCell.h */,
 				3F0E43FD1D6B449F00B208BB /* CustomCell.m */,
 				3F0E43FE1D6B449F00B208BB /* CustomCell.xib */,
-				3F00D48B1D6CA08500974E6C /* MagicMoveTransion.h */,
-				3F00D48C1D6CA08500974E6C /* MagicMoveTransion.m */,
+				3F00D48B1D6CA08500974E6C /* PushAnimation.h */,
+				3F00D48C1D6CA08500974E6C /* PushAnimation.m */,
 			);
 			name = First_VC;
 			sourceTree = "<group>";
@@ -115,8 +115,8 @@
 				3F0E44011D6B5ED900B208BB /* SecondViewController.h */,
 				3F0E44021D6B5ED900B208BB /* SecondViewController.m */,
 				3F00D4891D6C97BB00974E6C /* SecondViewController.xib */,
-				3F00D48E1D6CB46600974E6C /* MagicMoveBackTransion.h */,
-				3F00D48F1D6CB46600974E6C /* MagicMoveBackTransion.m */,
+				3F00D48E1D6CB46600974E6C /* BackAnimation.h */,
+				3F00D48F1D6CB46600974E6C /* BackAnimation.m */,
 			);
 			name = Second_VC;
 			sourceTree = "<group>";
@@ -196,8 +196,8 @@
 			files = (
 				3F0E44031D6B5ED900B208BB /* SecondViewController.m in Sources */,
 				3F0E43ED1D6B425600B208BB /* FirstViewController.m in Sources */,
-				3F00D48D1D6CA08500974E6C /* MagicMoveTransion.m in Sources */,
-				3F00D4901D6CB46600974E6C /* MagicMoveBackTransion.m in Sources */,
+				3F00D48D1D6CA08500974E6C /* PushAnimation.m in Sources */,
+				3F00D4901D6CB46600974E6C /* BackAnimation.m in Sources */,
 				3F0E43EA1D6B425600B208BB /* AppDelegate.m in Sources */,
 				3F0E43FF1D6B449F00B208BB /* CustomCell.m in Sources */,
 				3F0E43E71D6B425600B208BB /* main.m in Sources */,
