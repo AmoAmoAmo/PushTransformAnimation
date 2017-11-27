@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,18 +18,32 @@
                 <rect key="frame" x="0.0" y="0.0" width="326" height="237.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zeB-Ol-5NY">
-                        <rect key="frame" x="0.0" y="0.0" width="326" height="237"/>
-                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kb1-6H-rpk">
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="238"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zeB-Ol-5NY">
+                                <rect key="frame" x="0.0" y="0.0" width="326" height="238"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="zeB-Ol-5NY" secondAttribute="bottom" id="BEN-RT-hl2"/>
+                            <constraint firstItem="zeB-Ol-5NY" firstAttribute="leading" secondItem="kb1-6H-rpk" secondAttribute="leading" id="NrF-Ef-qLn"/>
+                            <constraint firstItem="zeB-Ol-5NY" firstAttribute="top" secondItem="kb1-6H-rpk" secondAttribute="top" id="XB3-ER-TbI"/>
+                            <constraint firstAttribute="trailing" secondItem="zeB-Ol-5NY" secondAttribute="trailing" id="whH-9a-RO8"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="zeB-Ol-5NY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="66D-MH-xjG"/>
-                    <constraint firstAttribute="bottom" secondItem="zeB-Ol-5NY" secondAttribute="bottom" id="Mr4-YI-SDB"/>
-                    <constraint firstItem="zeB-Ol-5NY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="daU-cJ-QRR"/>
-                    <constraint firstAttribute="trailing" secondItem="zeB-Ol-5NY" secondAttribute="trailing" id="shH-yI-FLq"/>
+                    <constraint firstAttribute="trailing" secondItem="kb1-6H-rpk" secondAttribute="trailing" id="L4F-PK-8Ez"/>
+                    <constraint firstItem="kb1-6H-rpk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QQm-6L-i48"/>
+                    <constraint firstItem="kb1-6H-rpk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="moa-Xf-QGT"/>
+                    <constraint firstAttribute="bottom" secondItem="kb1-6H-rpk" secondAttribute="bottom" id="pnI-Rh-8V2"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="bgView" destination="kb1-6H-rpk" id="cag-ow-Dta"/>
                 <outlet property="imgView" destination="zeB-Ol-5NY" id="a1y-yj-2Ai"/>
             </connections>
             <point key="canvasLocation" x="264" y="299"/>

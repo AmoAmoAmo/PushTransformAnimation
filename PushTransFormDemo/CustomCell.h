@@ -10,6 +10,7 @@
 
 @interface CustomCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (weak, nonatomic) IBOutlet UIView *bgView;
 
 +(instancetype)cellWithTableView:(UITableView *)tableView andindexPath:(NSIndexPath *)indexPath;
 

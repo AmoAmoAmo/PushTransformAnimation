@@ -59,6 +59,8 @@
         [containerView layoutIfNeeded];
         secondVC.view.alpha = 1;
         snapShotView.frame = secondFrame;
+        // ====
+        snapShotView.clipsToBounds = NO;
     } completion:^(BOOL finished) {
         //为了让回来的时候，cell上的图片显示，必须要让cell上的图片显示出来
         cell.imgView.hidden = NO;

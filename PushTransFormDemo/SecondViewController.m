@@ -20,7 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.headImgView.clipsToBounds = YES;
+    self.headImgView.layer.cornerRadius = 20;
 }
 
 -(void)viewWillAppear:(BOOL)animated

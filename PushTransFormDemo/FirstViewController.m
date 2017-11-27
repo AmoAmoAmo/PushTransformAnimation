@@ -80,9 +80,11 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CustomCell *cell = [CustomCell cellWithTableView:tableView andindexPath:indexPath];
-
+    
     return cell;
 }
+
+
 
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -93,6 +95,27 @@
     
 }
 
+-(void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    NSLog(@"----- highlight -------");
+    // highlight的时候，做一下缩放的动画
+    CustomCell *cell = [self.table cellForRowAtIndexPath:indexPath];
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        cell.transform = CGAffineTransformMakeScale(0.97, 0.97);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.3 animations:^{
+            
+            cell.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            
+            
+        }];
+        
+    }];
+    
+    
+}
 
 
 
@@ -103,7 +126,7 @@
     if (_table == nil)
     {
         _table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];//style:UITableViewStylePlain(默认 设置分组有悬浮)
-        //        _table.separatorStyle = UITableViewCellSeparatorStyleNone;//把table的线去掉
+        _table.separatorStyle = UITableViewCellSeparatorStyleNone;//把table的线去掉
         _table.delegate = self;
         _table.dataSource = self;
     }

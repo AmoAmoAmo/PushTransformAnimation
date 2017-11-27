@@ -29,12 +29,16 @@
     UIView *snapShotView = [secondVC.headImgView snapshotViewAfterScreenUpdates:NO];
     // 获取firstVC中图片的位置
     CustomCell *cell = [firstVC.table cellForRowAtIndexPath:[firstVC.table indexPathForSelectedRow]];
-    CGRect firstFrame  = [containerView convertRect:cell.imgView.frame fromView:cell];
+    CGRect firstFrame  = [containerView convertRect:cell.bgView.frame fromView:cell];
     CGRect secondFrame = [containerView convertRect:secondVC.headImgView.frame fromView:secondVC.view];
     snapShotView.frame = secondFrame;
     secondVC.headImgView.hidden = YES;
     cell.imgView.hidden = YES;
 //    NSLog(@"firstFrame = %@, secondFrame = %@, secondVC = %@",NSStringFromCGRect(firstFrame),NSStringFromCGRect(secondFrame), NSStringFromCGRect(secondVC.view.frame));
+    
+    //------
+    UIImageView *imgView = cell.imgView;
+    
     
     // 3.设置firstVC控制器的位置
     firstVC.view.frame = [transitionContext finalFrameForViewController:firstVC];//初始化firstVC的位置
@@ -48,6 +52,7 @@
     [UIView animateWithDuration:0.6 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:1 options:UIViewAnimationOptionCurveLinear animations:^{
         secondVC.view.alpha = 0;
         snapShotView.frame = firstFrame;
+//        [snapShotView removeFromSuperview];
     } completion:^(BOOL finished) {
         [snapShotView removeFromSuperview];
         secondVC.headImgView.hidden = NO;

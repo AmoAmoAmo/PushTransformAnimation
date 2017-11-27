@@ -8,12 +8,34 @@
 
 #import "CustomCell.h"
 
+@interface CustomCell ()
+
+
+@end
+
+
 @implementation CustomCell
 
 - (void)awakeFromNib {
     // Initialization code
     [super awakeFromNib];
-//    self.imgView.backgroundColor = [UIColor yellowColor];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;//去掉cell选中效果
+
+    self.bgView.clipsToBounds = YES;
+    self.bgView.layer.cornerRadius = 20;
+    
+    //    // 设置阴影
+    self.imgView.clipsToBounds = YES;
+    self.imgView.layer.cornerRadius = 20;
+    
+    self.contentView.clipsToBounds = YES;
+    self.layer.cornerRadius = 20;
+    self.contentView.layer.cornerRadius = 20.0f;
+    
+    self.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+    self.layer.shadowOffset = CGSizeMake(5, 5);
+    self.layer.shadowRadius = 4.0f;
+    self.layer.shadowOpacity = 0.5f;
 }
 
 
@@ -29,12 +51,20 @@
     }
     
     NSInteger num = indexPath.row % 4;
-//    NSLog(@"num == %ld", num);
     [cell.imgView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%ld.jpeg",num]]];
-    
+
     return cell;
 }
 
+-(void)setFrame:(CGRect)frame
+{
+    frame.origin.x += 10;
+    frame.origin.y += 20;
+    frame.size.width -= 20;
+    frame.size.height -= 20;
+//    NSLog(@"---- x= %.f, y = %.f, w = %.f, h = %.f ----", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
+    [super setFrame:frame];
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
